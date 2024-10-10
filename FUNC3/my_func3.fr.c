@@ -29,3 +29,15 @@ int my_show_word_array(char *const *tab) {
     // Renvoie 0 pour indiquer l'exécution réussie.
     return 0;
 }
+
+// Fonction principale du programme
+int main() {
+    // Tableau de mots à afficher
+    char * test_word_array [] = {"The", " Answer ", "to", "the", " Great ", " Question ...", "Of",
+                                "Life ,", "the", " Universe ", " and", " Everything ...", "Is ...", "Forty -two ,", 0};
+
+    // Affiche le contenu du tableau de mots
+    my_show_word_array(test_word_array);
+
+    return 0;
+}
