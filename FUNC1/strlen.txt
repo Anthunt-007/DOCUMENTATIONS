@@ -1,0 +1,17 @@
+The strlen() function in C is a standard library function that calculates the length of a null-terminated string. It takes a pointer to the first character of the string as input and returns the number of characters in the string, excluding the null terminator.
+
+How it works:
+
+Initialization: The function starts by initializing a counter variable (often named len) to 0. This variable will keep track of the number of characters encountered.
+Iteration: The function then enters a loop that iterates through each character of the string until it encounters the null terminator ('\0'). In each iteration:
+The value of the current character is checked.
+If the character is not the null terminator, the counter variable (len) is incremented by 1.
+Return value: Once the loop terminates (when the null terminator is found), the function returns the final value of the counter variable. This value represents the length of the string.
+
+
+Key points:
+
+The function takes a constant pointer to a character (const char *str) as input, indicating that it won't modify the original string.
+The while loop continues as long as the current character is not the null terminator.
+The len variable is incremented in each iteration, counting the characters.
+The function returns the final value of len, which represents the string's length.

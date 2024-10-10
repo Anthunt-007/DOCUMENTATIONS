@@ -1,0 +1,15 @@
+This function works as follows:
+
+Checks for NULL: It first checks if the src string is NULL. If it is, it returns NULL.
+Calculates length: It calculates the length of the src string using strlen and adds 1 to account for the null terminator.
+Allocates memory: It uses malloc to allocate memory for the destination string, including the null terminator. If memory allocation fails, it returns NULL.
+Copies string: It uses strcpy to copy the src string to the dest string.
+Returns pointer: Finally, it returns the pointer to the newly allocated dest string.
+
+Cette fonction fonctionne de la manière suivante :
+
+Vérifie si NULL : Elle vérifie d'abord si la chaîne src est NULL. Si c'est le cas, elle retourne NULL.
+Calcule la longueur : Elle calcule la longueur de la chaîne src en utilisant strlen et ajoute 1 pour prendre en compte le terminateur null.
+Alloue de la mémoire : Elle utilise malloc pour allouer de la mémoire pour la chaîne de destination, y compris le terminateur null. Si l'allocation de mémoire échoue, elle retourne NULL.
+Copie la chaîne : Elle utilise strcpy pour copier la chaîne src dans la chaîne dest.
+Retourne le pointeur : Enfin, elle retourne le pointeur vers la nouvelle chaîne dest allouée.

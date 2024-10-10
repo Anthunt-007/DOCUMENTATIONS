@@ -1,0 +1,11 @@
+Le type size_t en C : une taille sans surprise
+Qu'est-ce que size_t ?
+En C, le type size_t est un type entier non signé (unsigned integer) utilisé pour représenter la taille d'un objet. 
+Cette taille est généralement exprimée en nombre d'octets.
+Le choix d'un type entier non signé est tout à fait logique : une taille ne peut être négative, et elle est généralement un nombre entier.
+
+Pourquoi utiliser size_t ?
+Portabilité: Le type size_t est garanti par la norme C. Cela signifie que quel que soit le système d'exploitation ou l'architecture du processeur, la taille d'un objet sera toujours représentée par un size_t.
+Ce qui assure une meilleure portabilité de votre code.
+Optimisation: Les opérations sur les entiers non signés sont souvent plus rapides que celles sur les entiers signés. En utilisant size_t, vous bénéficiez de cette optimisation pour les calculs de taille.
+Clarté du code: Utiliser size_t pour représenter des tailles améliore la lisibilité de votre code. Cela rend explicite l'intention de la variable.
