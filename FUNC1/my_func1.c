@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// You must not use the library string.h if you're not allowed to. I'm sure you've already coded the strcpy function. Here you have the code of the strlen function.
+
 // Calculates the length of a null-terminated string.
 // Calcule la longueur d'une chaîne de caractères terminée par un caractère nul.
 
