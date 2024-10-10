@@ -1,0 +1,74 @@
+
+Explication du code C : Chaîne en tableau de mots
+
+Ce programme C divise une chaîne donnée en mots, en utilisant des caractères non alphanumériques comme séparateurs. Ci-dessous, nous expliquons chaque partie du code ligne par ligne en utilisant la chaîne d'exemple : "Hello, world! This is a test."
+
+1. Inclure les bibliothèques nécessaires :
+   - #include <stdlib.h> : Pour les fonctions d'allocation de mémoire (malloc, free).
+   - #include <unistd.h> : Pour la fonction write.
+   - #include <stdio.h> : Pour la fonction printf.
+
+2. Fonction my_str_isalpha :
+   - Vérifie si un caractère est un caractère alphabétique (A-Z ou a-z).
+   - Si c'est vrai, retourne 1 ; sinon, retourne 0.
+
+3. Fonction my_str_isnum :
+   - Vérifie si un caractère est un caractère numérique (0-9).
+   - Si c'est vrai, retourne 1 ; sinon, retourne 0.
+
+4. Fonction is_alnum_char :
+   - Combine les vérifications de my_str_isalpha et my_str_isnum.
+   - Retourne 1 si le caractère est soit alphabétique soit numérique.
+
+5. Fonction my_strncpy :
+   - Une implémentation personnalisée de strncpy.
+   - Copie jusqu'à 'n' caractères de la chaîne source (src) à la chaîne de destination (dest).
+   - Si 'src' a moins de 'n' caractères, remplit le reste de 'dest' avec des caractères nuls.
+
+6. Fonction copy_word :
+   - Alloue de la mémoire pour un mot, qui est la longueur du mot plus un pour le terminateur nul.
+   - Utilise my_strncpy pour copier le mot dans la mémoire allouée et retourne le pointeur.
+
+7. Fonction count_words :
+   - Compte le nombre de mots dans la chaîne d'entrée.
+   - Initialise le compteur à 0 et utilise un indicateur in_word pour suivre si nous sommes actuellement dans un mot.
+   - Itère à travers chaque caractère de la chaîne :
+     - Si le caractère est alphanumérique et que nous ne sommes pas dans un mot, incrémente le compteur et définit in_word à 1.
+     - Si le caractère n'est pas alphanumérique et que nous sommes dans un mot, définit in_word à 0.
+   - Retourne le nombre total de mots.
+
+8. Fonction my_str_to_word_array :
+   - Appelle count_words pour déterminer combien de mots sont dans la chaîne.
+   - Alloue de la mémoire pour un tableau de pointeurs vers des mots (plus un pour le terminateur NULL).
+   - Initialise des variables pour suivre l'index actuel, si nous sommes dans un mot, et le début du mot actuel.
+   - Itère à nouveau à travers la chaîne d'entrée :
+     - Si le caractère est alphanumérique et que nous ne sommes pas dans un mot, il marque le début d'un nouveau mot.
+     - Si nous atteignons un caractère non alphanumérique alors que nous sommes dans un mot, il copie le mot dans le tableau à l'aide de copy_word.
+   - Gère le cas du dernier mot dans la chaîne.
+   - Null-terminé le tableau de mots et le retourne.
+
+9. Fonction principale :
+   - Définit la chaîne d'entrée : "Hello, world! This is a test."
+   - Appelle my_str_to_word_array pour diviser la chaîne en mots.
+   - Vérifie si le tableau de mots a été créé avec succès :
+     - Si c'est réussi, itère à travers le tableau et imprime chaque mot.
+     - Libère chaque mot alloué après l'impression.
+     - Libère le tableau de pointeurs de mots à la fin.
+
+Scénario d'exemple :
+Pour la chaîne d'entrée "Hello, world!", le programme :
+- Identifie "Hello" comme un mot.
+- Identifie "world" comme un deuxième mot.
+- Identifie "This", "is", "a" et "test" comme mots supplémentaires.
+- Le nombre total de mots serait de 6.
+
+Sortie finale :
+Le programme affichera :
+Mot 1 : Hello
+Mot 2 : world
+Mot 3 : This
+Mot 4 : is
+Mot 5 : a
+Mot 6 : test
+
+Ceci conclut l'explication de la manière dont le code C fonctionne pour la chaîne donnée.
