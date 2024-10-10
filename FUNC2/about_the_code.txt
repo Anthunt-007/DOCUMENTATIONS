@@ -1,0 +1,30 @@
+Explanation:
+
+Check for arguments: If there are no arguments (argc == 1), the function returns NULL.
+Calculate total length: Iterates through the arguments to calculate the total length of the concatenated string, including newlines.
+Allocate memory: Allocates memory for the concatenated string.
+Concatenate arguments: Iterates through the arguments, concatenating them to the result string with a newline separator.
+Return result: Returns the concatenated string.
+Main function: Calls concat_params and prints the result using my_putstr, then frees the allocated memory.
+Key points:
+
+The function handles the case of no arguments by returning NULL.
+It calculates the total length accurately, including newlines.
+It uses malloc to allocate memory dynamically.
+It uses strcat to concatenate strings efficiently.
+The main function demonstrates how to use the concat_params function.
+
+Vérification des arguments : S'il n'y a pas d'arguments (argc == 1), la fonction renvoie NULL.
+Calcul de la longueur totale : Parcourt les arguments pour calculer la longueur totale de la chaîne concaténée, y compris les retours à la ligne.
+Allocation de mémoire : Alloue de la mémoire pour la chaîne concaténée.
+Concaténation des arguments : Parcourt les arguments, les concaténant à la chaîne de résultat avec un séparateur de retour à la ligne.
+Retour du résultat : Renvoie la chaîne concaténée.
+Fonction principale : Appelle concat_params et imprime le résultat en utilisant my_putstr, puis libère la mémoire allouée.
+
+Points clés:
+
+La fonction gère le cas où il n'y a pas d'arguments en renvoyant NULL.
+Elle calcule correctement la longueur totale, y compris les retours à la ligne.
+Elle utilise malloc pour allouer de la mémoire dynamiquement.
+Elle utilise strcat pour concaténer efficacement les chaînes de caractères.
+La fonction principale démontre comment utiliser la fonction concat_params.
