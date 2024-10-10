@@ -28,3 +28,5 @@ Elle calcule correctement la longueur totale, y compris les retours à la ligne.
 Elle utilise malloc pour allouer de la mémoire dynamiquement.
 Elle utilise strcat pour concaténer efficacement les chaînes de caractères.
 La fonction principale démontre comment utiliser la fonction concat_params.
+
+Make sure to remove what is not useful to you in the code i've provided.
