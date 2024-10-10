@@ -1,12 +1,11 @@
 #include <stdlib.h>
-#include <string.h>
 
-// You must not use the library string.h if you're not allowed to. I'm sure you've already coded the strcpy function. Here you have the code of the strlen function.
+// You must add your own my_strcpy function. It must be in your library.
 
 // Calculates the length of a null-terminated string.
 // Calcule la longueur d'une chaîne de caractères terminée par un caractère nul.
 
-size_t strlen(const char *str) {
+size_t my_strlen(const char *str) {
     size_t len = 0; // Initialize length counter to zero
     // Initialise le compteur de longueur à zéro
 
@@ -38,7 +37,7 @@ char *my_strdup(char const *src) {
         // Renvoyer NULL si la chaîne d'entrée est nulle
     }
 
-    size_t len = strlen(src) + 1; // Calculate the length of the source string, including the null terminator
+    size_t len = my_strlen(src) + 1; // Calculate the length of the source string, including the null terminator
     // Calculer la longueur de la chaîne source, y compris le caractère nul
 
     char *dest = malloc(len); // Allocate memory for the duplicate string
@@ -50,7 +49,7 @@ char *my_strdup(char const *src) {
         // Renvoyer NULL en cas d'échec d'allocation de mémoire
     }
 
-    strcpy(dest, src); // Copy the source string to the destination string
+    my_strcpy(dest, src); // Copy the source string to the destination string
     // Copier la chaîne source dans la chaîne de destination
 
     return dest; // Return a pointer to the newly created duplicate string
