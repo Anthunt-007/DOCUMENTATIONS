@@ -5,13 +5,27 @@
 // Fonction personnalisée pour vérifier si un caractère est alphabétique
 int my_str_isalpha(char c) {
     // Vérifie si le caractère est entre 'A' et 'Z' ou 'a' et 'z'
-    return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
+    if (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+        {
+            return 1:
+        }
+    else
+        {
+            return 0;
+        }
 }
 
 // Fonction personnalisée pour vérifier si un caractère est numérique
 int my_str_isnum(char c) {
     // Vérifie si le caractère est entre '0' et '9'
-    return (c >= '0' && c <= '9');
+    if (c >= '0' && c <= '9')
+        {
+            return 1:
+        }
+    else
+        {
+            return 0;
+        }
 }
 
 // Fonction personnalisée pour vérifier si un caractère est alphanumérique
