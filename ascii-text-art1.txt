@@ -7,3 +7,6 @@
    ██║   ╚██████╔╝╚██████╔╝███████║██║
    ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚═╝
                                       
+                                      
+                                      
+                                        fastfetch -l "/home/enam/.config/fastfetch/ascii-text-art.txt" --logo-color-1 red --color "cyan" --separator-output-color "red"
