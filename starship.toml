@@ -1,13 +1,12 @@
 format = """
-[](#4c004c) \
+🤧(#4c004c) \
 $os\
 $username\
 [](bg:#00004c fg:#4c004c)\
 $directory\
 [](fg:#00004c bg:#400000)\
 $git_branch\
-$git_status\
-[](fg:#330000 bg:#002600)\
+[](fg:#330000 bg:#4c4000)\
 $c\
 $elixir\
 $elm\
@@ -20,7 +19,7 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#002600 bg:#002600)\
+[](fg:#4c4000 bg:#002600)\
 $docker_context\
 $time\
 [ ](fg:#cc99a2)\
